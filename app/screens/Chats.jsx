@@ -3,6 +3,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { Dimensions } from 'react-native';
 
+
 // Icons
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Feather from 'react-native-vector-icons/Feather';
@@ -13,12 +14,14 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+// Components
+import Sidebar from '../components/sidebar';
+
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const App = () => {
 
   return (
-    <NavigationContainer>
       <SafeAreaProvider style={styles.container} >
         <StatusBar style="auto" />
         <SafeAreaView>
@@ -123,27 +126,10 @@ const App = () => {
             <AntDesign name="plussquare" size={20} color={'black'}/>
           </View>
 
-          <View style={styles.sidebar}>
-            <View style={styles.link}>
-              <MaterialIcons name="chat" size={20} color={'white'} />
-              <Text style={styles.linkText} >Chats</Text>
-            </View>
-            <View style={styles.link}>
-              <MaterialIcons name="update" size={20} color={'white'} />
-              <Text style={styles.linkText}>Updates</Text>
-            </View>
-            <View style={styles.link}>
-              <MaterialCommunityIcons name="account-group-outline" size={25} color={'white'} />
-              <Text style={styles.linkText}>Communities</Text>
-            </View>
-            <View style={styles.link}>
-            <MaterialCommunityIcons name="phone-outline" size={25} color={'white'} />
-              <Text style={styles.linkText}>Calls</Text>
-            </View>
-          </View>
+
         </SafeAreaView>
+        <Sidebar />
       </SafeAreaProvider>
-    </NavigationContainer>
   );
 };
 
