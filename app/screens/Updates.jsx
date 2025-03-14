@@ -211,6 +211,7 @@ const DetailsScreen = ({ navigation }) => {
                 <Text style={styles.follow}>Follow</Text>
               </View>
             </View>
+
             <View style={styles.chat}>
               <View style={styles.profilePictureDiv}>
                 <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
@@ -223,20 +224,21 @@ const DetailsScreen = ({ navigation }) => {
                 <Text style={styles.follow}>Follow</Text>
               </View>
             </View>
+            
           </View>
 
           <Text style={styles.exploremore}>Explore more</Text>
 
           <View style={styles.bottom}></View>
         </ScrollView>
-                  {/* Contact link button */}
-                  <View style={styles.camera}>
-                    <MaterialCommunityIcons name="camera-plus" size={21} color={'black'}/>
-                  </View>
-
-                  <View style={styles.pencil}>
-                    <MaterialCommunityIcons name="pencil" size={21} color={'white'}/>
-                  </View>
+        {/* Camera button */}
+        <View style={styles.camera}>
+          <MaterialCommunityIcons name="camera-plus" size={21} color={'black'} />
+        </View>
+        {/* Pencil button */}
+        <View style={styles.pencil}>
+          <MaterialCommunityIcons name="pencil" size={21} color={'white'} />
+        </View>
 
       </SafeAreaView>
       <Sidebar />
@@ -479,7 +481,7 @@ const styles = StyleSheet.create({
     width: 140,
     textAlign: 'center',
     borderRadius: 25,
-    padding:10,
+    padding: 10,
     backgroundColor: 'transparent',
     borderWidth: 1,
     borderColor: 'rgba(244, 246, 247, 0.29)',
@@ -488,33 +490,33 @@ const styles = StyleSheet.create({
   {
     height: windowHeight * 0.2,
   },
-      // Contact link button
-      camera:
-      {
-        backgroundColor: 'rgb(0, 255, 0)',
-        width: 50,
-        height: 50,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 60,
-        right: 15,
-        borderRadius: 10,
-      },
-      pencil:
-      {
-        backgroundColor: 'rgb(44, 44, 44)',
-        width: 40,
-        height: 40,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        position: 'absolute',
-        bottom: 120,
-        right: 20,
-        borderRadius: 10,
-      },
+  // Contact link button
+  camera:
+  {
+    backgroundColor: 'rgb(0, 255, 0)',
+    width: 50,
+    height: 50,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 60,
+    right: 15,
+    borderRadius: 10,
+  },
+  pencil:
+  {
+    backgroundColor: 'rgb(44, 44, 44)',
+    width: 40,
+    height: 40,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 120,
+    right: 20,
+    borderRadius: 10,
+  },
 });
 
 export default DetailsScreen;
