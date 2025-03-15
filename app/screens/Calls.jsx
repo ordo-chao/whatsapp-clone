@@ -36,48 +36,48 @@ function Call() {
 
 
           <View style={styles.favourite}>
-          <View style={styles.favouriteheader}>
-            <Text style={styles.subheader}>Favourites</Text>
-            <Text style={styles.more}>More</Text>
-          </View>
-          <View style={styles.chat}>
-            <View style={styles.profilePictureDiv}>
-              <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+            <View style={styles.favouriteheader}>
+              <Text style={styles.subheader}>Favourites</Text>
+              <Text style={styles.more}>More</Text>
             </View>
-            <View style={styles.favouritecontent}>
-              <Text style={styles.messageSender}>Kenyans.co.ke</Text>
+            <View style={styles.chat}>
+              <View style={styles.profilePictureDiv}>
+                <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+              </View>
+              <View style={styles.favouritecontent}>
+                <Text style={styles.messageSender}>Kenyans.co.ke</Text>
+              </View>
+              <View style={styles.favouriteoption}>
+                <Ionicons name="call-outline" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
+              </View>
             </View>
-            <View style={styles.favouriteoption}>
-              <Ionicons name="call-outline" color={'white'} size={25} />
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
-            </View>
-          </View>
 
-          <View style={styles.chat}>
-            <View style={styles.profilePictureDiv}>
-              <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+            <View style={styles.chat}>
+              <View style={styles.profilePictureDiv}>
+                <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+              </View>
+              <View style={styles.favouritecontent}>
+                <Text style={styles.messageSender}>Kenyans.co.ke</Text>
+              </View>
+              <View style={styles.favouriteoption}>
+                <Ionicons name="call-outline" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
+              </View>
             </View>
-            <View style={styles.favouritecontent}>
-              <Text style={styles.messageSender}>Kenyans.co.ke</Text>
-            </View>
-            <View style={styles.favouriteoption}>
-              <Ionicons name="call-outline" color={'white'} size={25} />
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
-            </View>
-          </View>
 
-          <View style={styles.chat}>
-            <View style={styles.profilePictureDiv}>
-              <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+            <View style={styles.chat}>
+              <View style={styles.profilePictureDiv}>
+                <Image source={require('../assets/Prince.jpg')} style={styles.profilePicture} />
+              </View>
+              <View style={styles.favouritecontent}>
+                <Text style={styles.messageSender}>Kenyans.co.ke</Text>
+              </View>
+              <View style={styles.favouriteoption}>
+                <Ionicons name="call-outline" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
+              </View>
             </View>
-            <View style={styles.favouritecontent}>
-              <Text style={styles.messageSender}>Kenyans.co.ke</Text>
-            </View>
-            <View style={styles.favouriteoption}>
-              <Ionicons name="call-outline" color={'white'} size={25} />
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
-            </View>
-          </View>
           </View>
 
           {/* Recent calls */}
@@ -120,7 +120,7 @@ function Call() {
                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.message}>310k followers</Text>
               </View>
               <View style={styles.messageDetails}>
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
               </View>
             </View>
 
@@ -133,7 +133,7 @@ function Call() {
                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.message}>310k followers</Text>
               </View>
               <View style={styles.messageDetails}>
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
               </View>
             </View>
 
@@ -146,7 +146,7 @@ function Call() {
                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.message}>310k followers</Text>
               </View>
               <View style={styles.messageDetails}>
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
               </View>
             </View>
 
@@ -159,14 +159,19 @@ function Call() {
                 <Text numberOfLines={1} ellipsizeMode="tail" style={styles.message}>310k followers</Text>
               </View>
               <View style={styles.messageDetails}>
-              <Ionicons name="videocam-sharp" color={'white'} size={25} />
+                <Ionicons name="videocam-sharp" color={'white'} size={25} />
               </View>
             </View>
           </View>
 
           <Text style={styles.bottomText}><Fontisto name="locked" />Your personal calls are <Text style={styles.green}>end-to-end encrypted</Text></Text>
 
+
         </ScrollView>
+        {/* Contact link button */}
+        <View style={styles.callLink}>
+          <MaterialIcons name="add-call" size={20} color={'black'} />
+        </View>
       </SafeAreaView>
       <Sidebar />
     </SafeAreaProvider>
@@ -345,6 +350,20 @@ const styles = StyleSheet.create({
   green:
   {
     color: 'rgb(0, 255, 68)',
+  },
+  // Contact link button
+  callLink:
+  {
+    backgroundColor: 'rgb(0, 255, 0)',
+    width: 60,
+    height: 60,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    bottom: 70,
+    right: 10,
+    borderRadius: 10,
   },
 
 });

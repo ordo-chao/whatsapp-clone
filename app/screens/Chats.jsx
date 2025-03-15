@@ -12,6 +12,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Foundation from 'react-native-vector-icons/Foundation';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 // Components
@@ -118,6 +119,10 @@ const App = () => {
                   </View>
                 </View>
               </View>
+            </View>
+
+            <View style={styles.bottom}>
+            <Text style={styles.bottomText}><Fontisto name="locked" />Your personal calls are <Text style={styles.green}>end-to-end encrypted</Text></Text>
             </View>
           </ScrollView>
 
@@ -314,7 +319,7 @@ const styles = StyleSheet.create(
       justifyContent: 'center',
       alignItems: 'center',
       position: 'absolute',
-      bottom: 110,
+      bottom: 70,
       right: 10,
       borderRadius: 10,
     },
@@ -339,6 +344,17 @@ const styles = StyleSheet.create(
     linkText:
     {
       color: 'white',
+    },
+    bottomText:
+    {
+      marginBottom: 0,
+      color: 'grey',
+      textAlign: 'center',
+      marginTop: 20,
+    },
+    green:
+    {
+      color: 'rgb(0, 255, 68)',
     },
   }
 );

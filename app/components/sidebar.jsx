@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     position: 'absolute',
-    bottom: 23,
+    bottom: 0,
   },
   link: {
     display: 'flex',
